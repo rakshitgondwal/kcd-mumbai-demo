@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: podtato-head-entry-monitor
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: podtato-head
+  endpoints:
+  - port: http
+    path: /metrics
+    interval: 10s
+    targetPort: 9000
+  namespaceSelector:
+    matchNames:
+    - podtato-kubectl
