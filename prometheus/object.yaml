@@ -7,6 +7,7 @@ spec:
   serviceMonitorSelector:
     matchLabels:
       app: podtato-head
+  externalUrl: http://monitoring.my.systems/prometheus
   resources:
     requests:
       memory: 400Mi
