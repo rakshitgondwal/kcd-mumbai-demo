@@ -1,8 +1,8 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podtato-head-entry
+  namespace: podtato-kubectl
   labels:
     app: podtato-head
 spec:
@@ -36,6 +36,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: podtato-head-entry
+  namespace: podtato-kubectl
   labels:
     app: podtato-head
 spec:
