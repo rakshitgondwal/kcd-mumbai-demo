@@ -6,5 +6,5 @@ metadata:
 spec:
   provider:
     name: my-provider
-  query: 'avg(rate(container_cpu_cfs_throttled_seconds_total{container="server", namespace="podtato-kubectl"}[1m]))'
+  query: "sum(kube_pod_container_resource_limits{resource='cpu'})"
   fetchIntervalSeconds: 10
