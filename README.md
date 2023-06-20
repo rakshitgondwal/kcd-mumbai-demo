@@ -20,7 +20,7 @@
     ```
 
 - **Setup Prometheus on your cluster**
-    For this deom, we'll be using prometheus to monitor our application, you can use any provider of your choice if you wish too.
+    For this demo, we'll be using prometheus to monitor our application, you can use any provider of your choice if you wish too.
     ```
     kubectl create namespace monitoring
     kubectl apply --server-side -f config/prometheus/setup
